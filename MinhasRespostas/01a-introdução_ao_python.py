@@ -209,7 +209,7 @@ def tinta(metros_pintar):
     Retorna:
         int: a quantidade de latas de tinta, arredondado pra cima.
     """
-    return round((metros_pintar/54)+0.5)
+    return round((metros_pintar/54)+0.49)
 
 
 def duzias(ovos):
