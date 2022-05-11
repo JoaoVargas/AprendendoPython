@@ -14,6 +14,7 @@ def palindromo(texto):
         bool: True ou False, dependendo dd texto ser palíndromo ou não.
     """
     # Desconsiderar: caixa, espaços e pontuação
+    return texto.lower().replace(" ", "").replace("!", "") == ''.join(reversed(texto.lower().replace(" ", "").replace("!", "")))
 
 
 def troca_caixa(texto):
