@@ -243,14 +243,15 @@ def leet(texto):
         string: o texto convertido, conforme o enunciado.
     """
     troca = {'a':'4','e':'3','g':'9','i':'1','s':'5','t':'7','o':'0'}
+    textob = ''
+    temp = ''
     for x in texto:
-        textob = ''
-        temp = ''
-        if x not in troca:
-            temp = x
+        if x.lower() in troca:
+            temp = troca[x.lower()]
         else:
-            temp = troca[x]
-        textob += temp
+            temp = x
+            
+        textob = textob + temp
         
     return textob
 
@@ -266,7 +267,15 @@ def apaga(texto, n):
     Retorna:
         string: o texto convertido, conforme o enunciado.
     """
+    textob = ''
+    for x in range(0,n):
+        textob = textob + texto[x]
+    
+    for x in range(n+1, len(texto)):
+        textob = textob + texto[x]
 
+    return textob
+    
 
 # Área de testes: só mexa aqui se souber o que está fazendo!
 acertos = 0
