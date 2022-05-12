@@ -244,8 +244,15 @@ def leet(texto):
     """
     troca = {'a':'4','e':'3','g':'9','i':'1','s':'5','t':'7','o':'0'}
     for x in texto:
-        x
-    return test
+        textob = ''
+        temp = ''
+        if x not in troca:
+            temp = x
+        else:
+            temp = troca[x]
+        textob += temp
+        
+    return textob
 
 
 def apaga(texto, n):
