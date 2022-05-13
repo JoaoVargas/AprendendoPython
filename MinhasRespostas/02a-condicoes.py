@@ -12,6 +12,12 @@ def maior3(a, b, c):
     Retorna:
         float: o maior entre os três valores.
     """
+    if a > b and b > c:
+        return a
+    elif b > c and c > a:
+        return b
+    else:
+        return c
 
 
 def menor3(a, b, c):
@@ -25,6 +31,12 @@ def menor3(a, b, c):
     Retorna:
         float: o menor entre os três valores.
     """
+    if a < b and b < c:
+        return a
+    elif b < c and c < a:
+        return b
+    else:
+        return c
 
 
 def testa_lados(a, b, c):
@@ -41,6 +53,16 @@ def testa_lados(a, b, c):
         string: um texto indicando o resultado,
                 conforme aparece nos testes no final desse arquivo.
     """
+    if a + b < c or c + b < a or a + c < b:
+        return 'Não forma um triângulo'
+    elif a == b and b == c:
+        return 'Triângulo equilátero'
+    elif (a == b and a != c) or (a == c and a != b) or (c == b and c != a):
+        return 'Triângulo isósceles'
+    else:
+        return 'Triângulo escaleno'
+    
+    
 
 
 def ano_bissexto(ano):
@@ -52,6 +74,11 @@ def ano_bissexto(ano):
     Retorna:
         bool: True ou False (verdadeiro ou falso), caso a ano seja ou não bissexto.
     """
+    if ano%4 == 0:
+        if ano%100 == 0 and (ano / 100)%4 != 0:
+            return False
+        return True
+    return False
 
 
 def maior_dia_do_mes(mes, ano):
